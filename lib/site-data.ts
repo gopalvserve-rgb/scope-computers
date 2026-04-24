@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: 'Scope Computers',
+  name: 'Computer Institute',
   tagline: 'Since 1993',
   headline: 'Institute Led by IITians and PhD Experts',
   subHeadline: 'Best CAD / CAM / AI & Data Science Institute',
   description:
-    'Scope Computers is the oldest and most established computer training institute in Rajasthan, with 35+ years of experience. Learn CAD, CAM, AI, Data Science, Interior Design, and more.',
+    'Computer Institute is the oldest and most established computer training institute in Rajasthan, with 35+ years of experience. Learn CAD, CAM, AI, Data Science, Interior Design, and more.',
   email: 'jodhpurscope@gmail.com',
   phone: '+91 8560000535',
   altPhone: '+91 291 2626800',
-  copyright: '© 2025 Scope Computers – All rights reserved.',
+  copyright: '© 2025 Computer Institute – All rights reserved.',
 };
 
 export const navigation = [
@@ -34,7 +34,7 @@ export const socialLinks = [
 export const offices = [
   {
     city: 'Jodhpur (Head Office)',
-    address: 'Scope Computers, Bhaskar Circle, Ratanada, Jodhpur / "Ugam Niwas", Near Khadi Bhandar, Ratanada, Jodhpur (Raj.)',
+    address: 'Computer Institute, Bhaskar Circle, Ratanada, Jodhpur / "Ugam Niwas", Near Khadi Bhandar, Ratanada, Jodhpur (Raj.)',
     phone: '+91 8560000535 | +91 291 2626800',
     email: 'jodhpurscope@gmail.com',
   },
@@ -109,16 +109,16 @@ export const allCourses: string[] = [
 ].sort();
 
 export const testimonials = [
-  { name: 'Era', course: 'Data Analytics', label: 'Professional', quote: 'My Data Analytics training at Scope Computers was amazing — deep learning, practical projects, and full placement assistance. I truly appreciate the support from Vinita Ma\'am and Jasdeep Sir.' },
-  { name: 'Pooja Khatri', course: 'Interior Designing', label: 'Outstanding', quote: 'Scope Computers gave me excellent Interior Design training, including AutoCAD, 3ds Max, and professional interior drawings. Their support helped me start good work in the market.' },
-  { name: 'Siddhartha Pillai', course: 'Architect Assistant', label: 'Experienced', quote: 'I completed the Architect Assistant course at Scope Computers. I received excellent guidance and strong support from the entire team.' },
-  { name: 'Nisha Sargra', course: 'Tally & Advance Excel', label: 'Excellent', quote: 'My experience at Scope Computers was outstanding. I learned Tally and Advanced Excel with complete clarity, and the faculty explained every concept very well.' },
-  { name: 'Monika', course: 'Machine Learning & Data Science', label: 'Remarkable', quote: 'I learned Machine Learning and Data Science from Scope Computers. Nishat Sir explained all concepts very clearly, and the support from Jasdeep Sir was excellent.' },
-  { name: 'Aftab Ali', course: 'Digital Marketing', label: 'Impressive', quote: 'My Digital Marketing training at Scope Computers was very effective. Kuldeep Sir taught with complete clarity and real industry knowledge.' },
-  { name: 'Yash Chouhan', course: 'Interior Designer', label: 'Skilled', quote: 'Learned Interior Design from Scope Computers. Sunil Sir, Firoz Sir, and Alka Ma\'am provided excellent training. I am currently employed.' },
-  { name: 'Prince Kumar', course: 'Graphic Design', label: 'Brilliant', quote: 'I completed my Graphic Design training at Scope Computers. Sushil Sir, with 25+ years of experience, taught everything according to industry standards.' },
-  { name: 'Ramraj', course: 'ArtCAM & AutoCAD', label: 'Dedicated', quote: 'I completed ArtCAM and AutoCAD training at Scope Computers. Dr. Nishat Sir taught us excellently and helped me build a strong portfolio.' },
-  { name: 'Abhishek', course: 'Land Survey & GIS', label: 'Trustworthy', quote: 'I completed GIS and Land Survey training at Scope Computers. Dr. Nishat Sir taught GIS and Survey CAD very clearly, and Imdad Sir trained us on Total Station.' },
+  { name: 'Era', course: 'Data Analytics', label: 'Professional', quote: 'My Data Analytics training at Computer Institute was amazing — deep learning, practical projects, and full placement assistance. I truly appreciate the support from Vinita Ma\'am and Jasdeep Sir.' },
+  { name: 'Pooja Khatri', course: 'Interior Designing', label: 'Outstanding', quote: 'Computer Institute gave me excellent Interior Design training, including AutoCAD, 3ds Max, and professional interior drawings. Their support helped me start good work in the market.' },
+  { name: 'Siddhartha Pillai', course: 'Architect Assistant', label: 'Experienced', quote: 'I completed the Architect Assistant course at Computer Institute. I received excellent guidance and strong support from the entire team.' },
+  { name: 'Nisha Sargra', course: 'Tally & Advance Excel', label: 'Excellent', quote: 'My experience at Computer Institute was outstanding. I learned Tally and Advanced Excel with complete clarity, and the faculty explained every concept very well.' },
+  { name: 'Monika', course: 'Machine Learning & Data Science', label: 'Remarkable', quote: 'I learned Machine Learning and Data Science from Computer Institute. Nishat Sir explained all concepts very clearly, and the support from Jasdeep Sir was excellent.' },
+  { name: 'Aftab Ali', course: 'Digital Marketing', label: 'Impressive', quote: 'My Digital Marketing training at Computer Institute was very effective. Kuldeep Sir taught with complete clarity and real industry knowledge.' },
+  { name: 'Yash Chouhan', course: 'Interior Designer', label: 'Skilled', quote: 'Learned Interior Design from Computer Institute. Sunil Sir, Firoz Sir, and Alka Ma\'am provided excellent training. I am currently employed.' },
+  { name: 'Prince Kumar', course: 'Graphic Design', label: 'Brilliant', quote: 'I completed my Graphic Design training at Computer Institute. Sushil Sir, with 25+ years of experience, taught everything according to industry standards.' },
+  { name: 'Ramraj', course: 'ArtCAM & AutoCAD', label: 'Dedicated', quote: 'I completed ArtCAM and AutoCAD training at Computer Institute. Dr. Nishat Sir taught us excellently and helped me build a strong portfolio.' },
+  { name: 'Abhishek', course: 'Land Survey & GIS', label: 'Trustworthy', quote: 'I completed GIS and Land Survey training at Computer Institute. Dr. Nishat Sir taught GIS and Survey CAD very clearly, and Imdad Sir trained us on Total Station.' },
 ];
 
 export const faculty = [

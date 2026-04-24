@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ['Scope Computers', 'AutoCAD Jodhpur', 'CAD CAM Institute', 'Data Science Course', 'Interior Design Course', 'IIT Training', 'NIELIT O Level'],
-  authors: [{ name: 'Scope Computers' }],
+  keywords: ['Computer Institute', 'AutoCAD Jodhpur', 'CAD CAM Institute', 'Data Science Course', 'Interior Design Course', 'IIT Training', 'NIELIT O Level'],
+  authors: [{ name: 'Computer Institute' }],
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.headline}`,
     description: siteConfig.description,

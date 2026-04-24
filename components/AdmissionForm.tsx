@@ -48,7 +48,7 @@ export default function AdmissionForm() {
         <div className="text-4xl">🎉</div>
         <h3 className="mt-2 text-xl font-bold text-green-900">Application Received!</h3>
         <p className="mt-2 text-sm text-green-800">
-          Thank you for applying to Scope Computers. Our admissions team will contact you within 24 hours.
+          Thank you for applying to Computer Institute. Our admissions team will contact you within 24 hours.
         </p>
         <button
           type="button"

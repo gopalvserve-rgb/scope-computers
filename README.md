@@ -1,4 +1,4 @@
-# Scope Computers — Official Website
+# Computer Institute — Official Website
 
 Next.js 14 + Vercel Postgres + iron-session (admin auth).
 Built for deployment on Vercel via GitHub.
@@ -36,7 +36,7 @@ From the project root:
 ```bash
 git init
 git add .
-git commit -m "Initial commit — Scope Computers site"
+git commit -m "Initial commit — Computer Institute site"
 # Create a new empty repo on github.com called 'scope-computers' (or any name)
 git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/scope-computers.git
@@ -215,4 +215,4 @@ Push to GitHub → Vercel auto-deploys.
 
 ## Support
 
-Built for Scope Computers — institute led by IITians and PhD experts, since 1993.
+Built for Computer Institute — institute led by IITians and PhD experts, since 1993.

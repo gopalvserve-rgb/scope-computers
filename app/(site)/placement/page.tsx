@@ -1,6 +1,6 @@
 import ResumeUpload from '@/components/ResumeUpload';
 
-export const metadata = { title: 'Scope Placement — 100% Placement Assistance' };
+export const metadata = { title: 'Placement Cell — 100% Placement Assistance' };
 
 const placedStudents = [
   { name: 'Amit Sharma', company: 'Google India', role: 'Software Engineer', package: '₹34 LPA', batch: '2024' },
@@ -18,7 +18,7 @@ export default function PlacementPage() {
     <>
       <section className="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
         <div className="container-wrap py-16 lg:py-20">
-          <div className="text-xs font-semibold text-brand-200">Scope Placement Cell</div>
+          <div className="text-xs font-semibold text-brand-200">Placement Cell Cell</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Your Dream Job Starts Here</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
             100% Placement Assistance — industry-aligned training, mock interviews, and 500+ recruiter partnerships.

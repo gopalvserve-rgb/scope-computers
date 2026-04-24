@@ -36,7 +36,7 @@ export default function HomePage() {
               {siteConfig.subHeadline}
             </p>
             <p className="mt-6 text-brand-100/90 text-base max-w-xl leading-relaxed">
-              Best AutoCAD Computer Center in Jodhpur. Scope Computers is the oldest and most established
+              Best AutoCAD Computer Center in Jodhpur. Computer Institute is the oldest and most established
               institute in the region, with an impressive track record of 35+ years of experience.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -211,9 +211,9 @@ export default function HomePage() {
       <section className="section">
         <div className="container-wrap">
           <div className="max-w-2xl">
-            <h2 className="section-heading">Job Openings at Scope Placement</h2>
+            <h2 className="section-heading">Job Openings at Placement Cell</h2>
             <p className="section-sub">
-              Discover career opportunities through Scope Placement. We connect skilled students with top companies.
+              Discover career opportunities through Placement Cell. We connect skilled students with top companies.
             </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -280,7 +280,7 @@ export default function HomePage() {
         <div className="container-wrap py-16 lg:py-20 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">Ready to Start Your Career Journey?</h2>
           <p className="mt-3 text-brand-100 max-w-xl mx-auto">
-            Join 150,000+ students trained by Scope Computers. Admissions open for all courses.
+            Join 150,000+ students trained by Computer Institute. Admissions open for all courses.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <Link href="/admission" className="btn-accent">Apply Now</Link>

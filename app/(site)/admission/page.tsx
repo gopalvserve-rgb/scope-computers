@@ -8,7 +8,7 @@ export default function AdmissionPage() {
       <section className="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
         <div className="container-wrap py-16 lg:py-20">
           <div className="text-xs font-semibold text-brand-200">Admission &amp; Payment</div>
-          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Join Scope Computers</h1>
+          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Join Computer Institute</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
             Take the first step toward a successful IT career. Our admission process is simple and hassle-free —
             complete the form below and our team will reach out within 24 hours.
@@ -32,7 +32,7 @@ export default function AdmissionPage() {
 
           <aside className="space-y-6">
             <div className="card">
-              <h3 className="font-bold text-slate-900">Why Choose Scope Computers?</h3>
+              <h3 className="font-bold text-slate-900">Why Choose Computer Institute?</h3>
               <ul className="mt-4 space-y-2 text-sm text-slate-700">
                 <li>✅ 35+ years of experience</li>
                 <li>✅ 150,000+ students trained</li>
@@ -54,7 +54,7 @@ export default function AdmissionPage() {
               <p className="mt-2 text-xs text-slate-600 leading-relaxed">
                 By submitting this form, you agree that all information provided is accurate and complete.
                 Admission is subject to verification and institute policies. Fees once paid are non-refundable.
-                Scope Computers reserves the right to modify course details, schedules, or terms without prior notice.
+                Computer Institute reserves the right to modify course details, schedules, or terms without prior notice.
               </p>
             </div>
           </aside>

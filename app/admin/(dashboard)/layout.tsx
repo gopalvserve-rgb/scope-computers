@@ -23,10 +23,10 @@ export default async function DashboardLayout({ children }: { children: ReactNod
         <div className="p-6 border-b border-slate-800">
           <Link href="/admin" className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white font-bold">
-              SC
+              CI
             </div>
             <div>
-              <div className="font-bold text-white">Scope Admin</div>
+              <div className="font-bold text-white">Institute Admin</div>
               <div className="text-xs text-slate-400">Control Panel</div>
             </div>
           </Link>

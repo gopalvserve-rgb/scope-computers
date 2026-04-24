@@ -16,7 +16,7 @@ export default function FacultyPage() {
           <div className="text-xs font-semibold text-brand-200">Meet the Team</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Our Expert Faculty</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            Learn from the best instructors at Scope Computers — IITians, PhD holders, and industry veterans
+            Learn from the best instructors at Computer Institute — IITians, PhD holders, and industry veterans
             with 10 to 30+ years of real-world experience.
           </p>
         </div>

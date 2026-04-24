@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white font-bold">
-              SC
+              CI
             </div>
             <div>
               <div className="text-lg font-bold text-white">{siteConfig.name}</div>
@@ -41,7 +41,7 @@ export default function Footer() {
             <li><Link href="/about" className="hover:text-white">About Us</Link></li>
             <li><Link href="/courses" className="hover:text-white">Courses</Link></li>
             <li><Link href="/faculty" className="hover:text-white">Faculty</Link></li>
-            <li><Link href="/placement" className="hover:text-white">Scope Placement</Link></li>
+            <li><Link href="/placement" className="hover:text-white">Placement Cell</Link></li>
             <li><Link href="/syllabus" className="hover:text-white">Syllabus Download</Link></li>
           </ul>
         </div>
@@ -75,7 +75,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="container-wrap py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>{siteConfig.copyright}</div>
-          <div>Developed with care for Scope Computers</div>
+          <div>Developed with care for Computer Institute</div>
         </div>
       </div>
     </footer>

@@ -8,10 +8,10 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
         <div className="container-wrap py-16 lg:py-20">
-          <div className="text-xs font-semibold text-brand-200">About Scope Computers</div>
+          <div className="text-xs font-semibold text-brand-200">About Computer Institute</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">About Us</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            Welcome to Scope Computers — your trusted partner in IT education and digital skills. We
+            Welcome to Computer Institute — your trusted partner in IT education and digital skills. We
             provide expert-led courses in CAD, graphic design, AI, and computer applications to help
             students and professionals excel in the digital world.
           </p>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-6 rounded-lg border-l-4 border-accent-500 bg-accent-50 p-4 text-slate-800">
               <em>
-                Under his leadership, Scope Computers has grown into one of the most practical, industry-driven
+                Under his leadership, Computer Institute has grown into one of the most practical, industry-driven
                 training ecosystems in the country.
               </em>
             </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
             <div className="text-xs font-semibold text-brand-700">Who We Are</div>
             <h2 className="section-heading mt-2">Building Futures with Expert-Led Learning</h2>
             <p className="section-sub">
-              Established in 1993, Scope Computers is one of India&apos;s oldest and most respected computer
+              Established in 1993, Computer Institute is one of India&apos;s oldest and most respected computer
               training institutes. With branches in Bangalore, Jodhpur, Hyderabad, Ajmer, Noida, Gorakhpur,
               and beyond, we have built a legacy of excellence spanning three decades.
             </p>
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
           <div className="mt-10 rounded-xl bg-brand-700 text-white p-6 lg:p-8">
             <p className="text-lg font-semibold">
-              Scope Computers is not just an institute — it is a complete ecosystem of knowledge, innovation, and opportunity.
+              Computer Institute is not just an institute — it is a complete ecosystem of knowledge, innovation, and opportunity.
             </p>
           </div>
         </div>

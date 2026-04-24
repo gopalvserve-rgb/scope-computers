@@ -8,7 +8,7 @@ export default function TermsPage() {
         <p>
           By submitting any form on this website, you agree that all information provided is accurate and
           complete. Admission is subject to verification and institute policies. Fees once paid are
-          non-refundable. Scope Computers reserves the right to modify course details, schedules, or terms
+          non-refundable. Computer Institute reserves the right to modify course details, schedules, or terms
           without prior notice.
         </p>
         <p>

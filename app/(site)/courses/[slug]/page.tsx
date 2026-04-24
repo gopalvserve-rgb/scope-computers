@@ -64,7 +64,7 @@ export default function CourseArticlePage({ params }: { params: { slug: string }
             <div className="card">
               <h3 className="font-bold text-slate-900">Ready to Start?</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Join hundreds of students who have built rewarding careers with Scope Computers.
+                Join hundreds of students who have built rewarding careers with Computer Institute.
               </p>
               <Link href="/admission" className="mt-4 btn-primary w-full">Apply Now</Link>
             </div>

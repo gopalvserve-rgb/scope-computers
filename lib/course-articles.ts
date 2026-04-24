@@ -74,9 +74,9 @@ export const courseArticles: CourseArticle[] = [
         ],
       },
       {
-        heading: 'Why My Scope Computers Is the Ideal Choice',
+        heading: 'Why My Computer Institute Is the Ideal Choice',
         body: [
-          'Scope stands out as an ideal destination for interior design education in Jodhpur due to its strong academic foundation, industry-oriented training approach, and focus on practical learning. Scope integrates essential modules such as furniture design, product design, graphic designing, surveying, and business fundamentals.',
+          'Our institute stands out as an ideal destination for interior design education in Jodhpur due to its strong academic foundation, industry-oriented training approach, and focus on practical learning. Our institute integrates essential modules such as furniture design, product design, graphic designing, surveying, and business fundamentals.',
         ],
       },
     ],
@@ -142,7 +142,7 @@ export const courseArticles: CourseArticle[] = [
         ],
       },
       {
-        heading: 'Why Scope Computers',
+        heading: 'Why Computer Institute',
         body: [
           'Sushil Joshi Sir brings 25+ years of real-world design experience. Our in-house advertising agency means you work on actual client briefs — not just classroom projects. You graduate with a portfolio that wins interviews.',
         ],

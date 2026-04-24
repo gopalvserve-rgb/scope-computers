@@ -6,7 +6,7 @@ export default function PrivacyPage() {
       <div className="container-wrap max-w-3xl prose-scope">
         <h1 className="text-3xl font-bold text-slate-900">Privacy Policy</h1>
         <p>
-          Scope Computers respects your privacy. We collect the information you voluntarily provide via admission,
+          Computer Institute respects your privacy. We collect the information you voluntarily provide via admission,
           contact, inquiry, and resume-upload forms to process your request and communicate with you about our
           programs and services.
         </p>

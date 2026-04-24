@@ -9,10 +9,10 @@ export default function AdminLoginPage() {
         <div className="mx-auto max-w-md rounded-2xl bg-white p-8 shadow-xl ring-1 ring-slate-200">
           <div className="text-center">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-brand-700 text-white font-bold">
-              SC
+              CI
             </div>
             <h1 className="mt-4 text-2xl font-bold text-slate-900">Admin Login</h1>
-            <p className="mt-2 text-sm text-slate-600">Sign in to the Scope Computers admin panel.</p>
+            <p className="mt-2 text-sm text-slate-600">Sign in to the Computer Institute admin panel.</p>
           </div>
           <div className="mt-8">
             <LoginForm />
