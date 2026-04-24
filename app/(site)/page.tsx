@@ -1,15 +1,24 @@
 import Link from 'next/link';
-import {
-  siteConfig,
-  testimonials,
-  stats,
-  campusCities,
-  featuredJobs,
-  events,
-  blogPosts,
-} from '@/lib/site-data';
+import { siteConfig, stats, campusCities, featuredJobs } from '@/lib/site-data';
+import { getAllContent, getCourses, getTestimonials, getEvents, getBlogPosts, seedAllIfEmpty } from '@/lib/cms';
 
-export default function HomePage() {
+export const dynamic = 'force-dynamic';
+
+export default async function HomePage() {
+  // Auto-seed on first visit if DB is empty
+  await seedAllIfEmpty();
+
+  const [content, courses, testimonials, events, blogPosts] = await Promise.all([
+    getAllContent(),
+    getCourses(),
+    getTestimonials(),
+    getEvents(),
+    getBlogPosts(),
+  ]);
+
+  const featuredCourses = courses.filter((c) => c.is_featured).slice(0, 6);
+  const popularCourses = featuredCourses.length > 0 ? featuredCourses : courses.slice(0, 6);
+
   return (
     <>
       {/* HERO */}
@@ -27,23 +36,14 @@ export default function HomePage() {
         <div className="container-wrap relative py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur text-xs font-semibold tracking-wide text-brand-100 ring-1 ring-white/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-400" /> {siteConfig.tagline}
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-400" /> {content.tagline}
             </div>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              {siteConfig.headline}
-            </h1>
-            <p className="mt-4 text-xl font-semibold text-brand-100">
-              {siteConfig.subHeadline}
-            </p>
-            <p className="mt-6 text-brand-100/90 text-base max-w-xl leading-relaxed">
-              Jodhpur&apos;s longest-running computer training institute. Three decades of experience turning
-              beginners into hired professionals across CAD, CAM, AI, data science, and design.
-            </p>
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">{content.headline}</h1>
+            <p className="mt-4 text-xl font-semibold text-brand-100">{content.sub_headline}</p>
+            <p className="mt-6 text-brand-100/90 text-base max-w-xl leading-relaxed">{content.hero_paragraph}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/courses" className="btn-accent">Find Courses</Link>
-              <Link href="/about" className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">
-                Know More
-              </Link>
+              <Link href="/about" className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">Know More</Link>
             </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {stats.map((s) => (
@@ -55,21 +55,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Featured Course Card */}
           <div className="relative">
             <div className="rounded-2xl bg-white/95 p-8 shadow-2xl ring-1 ring-white/40 text-slate-800">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent-100 text-accent-700 text-xs font-semibold">
-                ⭐ Featured Course
-              </div>
-              <h3 className="mt-3 text-2xl font-bold text-slate-900">
-                Interior Design &amp; Architect Assistant
-              </h3>
-              <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Go from beginner to hireable. Master CAD, 3D modeling, space planning, materials, and the client
-                handling that wins repeat work. Graduate ready for a job or your own practice.
-              </p>
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent-100 text-accent-700 text-xs font-semibold">⭐ Featured Course</div>
+              <h3 className="mt-3 text-2xl font-bold text-slate-900">{content.featured_course_title}</h3>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">{content.featured_course_description}</p>
               <ul className="mt-4 space-y-1.5 text-sm text-slate-700">
-                <li>✅ Job-focused curriculum, not theory-heavy</li>
+                <li>✅ Job-focused curriculum</li>
                 <li>✅ Real projects and a finished portfolio</li>
                 <li>✅ Direct placement assistance</li>
                 <li>✅ Small-batch mentoring</li>
@@ -79,11 +71,7 @@ export default function HomePage() {
                 <Link href="/syllabus" className="btn-secondary">Download Brochure</Link>
               </div>
               <div className="mt-6 pt-6 border-t border-slate-100 flex items-center gap-4 text-xs text-slate-500">
-                <div>⭐ 4.8 / 5</div>
-                <div>•</div>
-                <div>2,340 reviews</div>
-                <div>•</div>
-                <div>150k+ trained</div>
+                <div>⭐ 4.8 / 5</div><div>•</div><div>2,340 reviews</div><div>•</div><div>150k+ trained</div>
               </div>
             </div>
           </div>
@@ -96,58 +84,19 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <div className="text-sm font-semibold text-brand-700">Programs built for outcomes</div>
             <h2 className="section-heading mt-2">Pick a Career Path</h2>
-            <p className="section-sub">
-              Short, deliberate tracks designed around what employers actually hire for — not filler content.
-              Choose your direction and we&apos;ll build the rest of the plan with you.
-            </p>
+            <p className="section-sub">Short, deliberate tracks designed around what employers actually hire for.</p>
           </div>
-
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: 'AutoCAD Certification Program',
-                body: 'Master 2D drafting and 3D modeling under Chief Minister-awarded trainer Nishat Khan, with 30 years in the classroom. Rajasthan&apos;s most established AutoCAD track with a strong placement record.',
-                tag: 'Best-seller',
-              },
-              {
-                title: 'ArtCAM Training Program',
-                body: 'Production-grade CNC design. Learn clean vectors, relief modeling, and toolpath optimization — the skills that turn design files into reliable machine output.',
-                tag: 'Practical',
-              },
-              {
-                title: "'O' Level Course",
-                body: 'NIELIT-approved, one-year certification recognized by Govt. of India (Ministry of Electronics & IT). Valid for a wide range of government and private sector roles.',
-                tag: 'Govt. Approved',
-              },
-              {
-                title: 'Interior Design',
-                body: 'AutoCAD, 3ds Max, space planning, materials — the full stack for a hireable designer. Leave with a portfolio of finished projects, not classroom exercises.',
-                tag: 'Job-ready',
-              },
-              {
-                title: 'Data Science &amp; Machine Learning',
-                body: 'Python, statistics, and real ML projects taught by IIT-trained data scientists. Industry-standard tooling and a capstone you can put on your resume.',
-                tag: 'High-demand',
-              },
-              {
-                title: 'Tally with GST + Advanced Excel',
-                body: 'The fastest path into an accounting role. Full GST workflow, payroll, inventory, and reporting — plus enough Excel to handle any MIS request.',
-                tag: 'Short-term',
-              },
-            ].map((c) => (
-              <div key={c.title} className="card">
-                <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold">
-                  {c.tag}
-                </div>
-                <h3 className="mt-3 text-lg font-bold text-slate-900">{c.title}</h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: c.body }} />
-                <Link href="/courses" className="mt-4 inline-flex items-center text-sm font-semibold text-brand-700 hover:text-brand-800">
-                  Learn more →
-                </Link>
+            {popularCourses.map((c) => (
+              <div key={c.id} className="card">
+                {c.tag && <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold">{c.tag}</div>}
+                <h3 className="mt-3 text-lg font-bold text-slate-900">{c.name}</h3>
+                {c.description && <p className="mt-2 text-sm text-slate-600 leading-relaxed">{c.description}</p>}
+                <div className="mt-2 text-xs text-slate-400">{c.category}</div>
+                <Link href="/courses" className="mt-4 inline-flex items-center text-sm font-semibold text-brand-700 hover:text-brand-800">Learn more →</Link>
               </div>
             ))}
           </div>
-
           <div className="mt-10 text-center">
             <Link href="/courses" className="btn-primary">View All Courses</Link>
           </div>
@@ -155,34 +104,32 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section">
-        <div className="container-wrap">
-          <div className="max-w-2xl">
-            <h2 className="section-heading">What Our Students Say</h2>
-            <p className="section-sub">
-              Our students are at the heart of everything we do. Here&apos;s what they have to say about their learning journey.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.slice(0, 6).map((t) => (
-              <div key={t.name} className="card flex flex-col">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700 font-bold">
-                    {t.name.charAt(0)}
+      {testimonials.length > 0 && (
+        <section className="section">
+          <div className="container-wrap">
+            <div className="max-w-2xl">
+              <h2 className="section-heading">What Our Students Say</h2>
+              <p className="section-sub">Real feedback from students about their learning journey.</p>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {testimonials.slice(0, 6).map((t) => (
+                <div key={t.id} className="card flex flex-col">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700 font-bold">{t.name.charAt(0)}</div>
+                    <div>
+                      <div className="font-semibold text-slate-900">{t.name}</div>
+                      <div className="text-xs text-slate-500">{t.course}</div>
+                    </div>
+                    {t.label && <span className="ml-auto text-xs font-semibold text-accent-600">{t.label}</span>}
                   </div>
-                  <div>
-                    <div className="font-semibold text-slate-900">{t.name}</div>
-                    <div className="text-xs text-slate-500">{t.course}</div>
-                  </div>
-                  <span className="ml-auto text-xs font-semibold text-accent-600">{t.label}</span>
+                  <p className="mt-4 text-sm text-slate-700 leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
+                  <div className="mt-4 text-yellow-500 text-sm">★★★★★</div>
                 </div>
-                <p className="mt-4 text-sm text-slate-700 leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
-                <div className="mt-4 text-yellow-500 text-sm">★★★★★</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CAMPUS CITIES */}
       <section className="section bg-gradient-to-br from-brand-50 to-white">
@@ -190,19 +137,12 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="section-heading">Centers Across India</h2>
-              <p className="section-sub">
-                On-site classrooms wherever our students are. In-person mentoring makes a difference — and
-                we&apos;re adding new cities every year.
-              </p>
-              <Link href="/contact" className="mt-6 inline-block btn-primary">
-                Find a Center Near You
-              </Link>
+              <p className="section-sub">On-site classrooms wherever our students are. In-person mentoring makes a difference.</p>
+              <Link href="/contact" className="mt-6 inline-block btn-primary">Find a Center Near You</Link>
             </div>
             <div className="grid grid-cols-2 gap-3">
               {campusCities.map((c) => (
-                <div key={c} className="rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-200 text-sm font-medium text-slate-700">
-                  📍 {c}
-                </div>
+                <div key={c} className="rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-200 text-sm font-medium text-slate-700">📍 {c}</div>
               ))}
             </div>
           </div>
@@ -214,10 +154,7 @@ export default function HomePage() {
         <div className="container-wrap">
           <div className="max-w-2xl">
             <h2 className="section-heading">Hiring Through Our Placement Cell</h2>
-            <p className="section-sub">
-              Our placement team works directly with recruiters to match students with roles that fit their skill
-              level and ambition. Here&apos;s a snapshot of what&apos;s active right now.
-            </p>
+            <p className="section-sub">Our placement team matches students with roles that fit their skills and ambition.</p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredJobs.map((job) => (
@@ -225,9 +162,7 @@ export default function HomePage() {
                 <div className="text-xs font-semibold text-brand-700">Open Role</div>
                 <h3 className="mt-1 text-lg font-bold text-slate-900">{job.title}</h3>
                 <div className="mt-2 text-sm text-slate-600">Package: {job.range}</div>
-                <Link href="/placement" className="mt-4 inline-flex items-center text-sm font-semibold text-accent-600 hover:text-accent-700">
-                  View details →
-                </Link>
+                <Link href="/placement" className="mt-4 inline-flex items-center text-sm font-semibold text-accent-600 hover:text-accent-700">View details →</Link>
               </div>
             ))}
           </div>
@@ -235,62 +170,57 @@ export default function HomePage() {
       </section>
 
       {/* EVENTS */}
-      <section className="section bg-slate-50">
-        <div className="container-wrap">
-          <div className="max-w-2xl">
-            <h2 className="section-heading">Workshops &amp; Events</h2>
-            <p className="section-sub">
-              Free workshops, industry sessions, and special events — open to current students and the public.
-            </p>
-          </div>
-          <div className="mt-10 space-y-3">
-            {events.map((ev) => (
-              <div key={ev.title} className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-slate-200 flex flex-col sm:flex-row sm:items-center gap-3">
-                <div className="flex-1">
-                  <h3 className="font-semibold text-slate-900">{ev.title}</h3>
-                  <div className="text-sm text-slate-500 mt-1">📅 {ev.date} &nbsp;•&nbsp; 📍 {ev.location}</div>
+      {events.length > 0 && (
+        <section className="section bg-slate-50">
+          <div className="container-wrap">
+            <div className="max-w-2xl">
+              <h2 className="section-heading">Workshops &amp; Events</h2>
+              <p className="section-sub">Free workshops, industry sessions, and training programs.</p>
+            </div>
+            <div className="mt-10 space-y-3">
+              {events.map((ev) => (
+                <div key={ev.id} className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-slate-200 flex flex-col sm:flex-row sm:items-center gap-3">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-slate-900">{ev.title}</h3>
+                    <div className="text-sm text-slate-500 mt-1">📅 {ev.date_text} &nbsp;•&nbsp; 📍 {ev.location}</div>
+                  </div>
+                  <Link href="/contact" className="btn-secondary !text-xs !py-2">Register Interest</Link>
                 </div>
-                <Link href="/contact" className="btn-secondary !text-xs !py-2">Register Interest</Link>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* BLOG */}
-      <section className="section">
-        <div className="container-wrap">
-          <div className="max-w-2xl">
-            <h2 className="section-heading">From Our Blog</h2>
-            <p className="section-sub">
-              Career advice, course breakdowns, and practical guides — from our faculty and industry partners.
-            </p>
+      {blogPosts.length > 0 && (
+        <section className="section">
+          <div className="container-wrap">
+            <div className="max-w-2xl">
+              <h2 className="section-heading">From Our Blog</h2>
+              <p className="section-sub">Career advice, course breakdowns, and practical guides.</p>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {blogPosts.slice(0, 6).map((p) => (
+                <Link key={p.id} href={`/courses/${p.slug}`} className="card block group">
+                  <div className="text-xs text-slate-500">{new Date(p.published_at).toLocaleDateString()}</div>
+                  <h3 className="mt-2 font-bold text-slate-900 group-hover:text-brand-700 transition">{p.title}</h3>
+                  <div className="mt-4 text-sm font-semibold text-brand-700">Read article →</div>
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.slice(0, 6).map((p) => (
-              <Link key={p.slug} href={`/courses/${p.slug}`} className="card block group">
-                <div className="text-xs text-slate-500">{p.date}</div>
-                <h3 className="mt-2 font-bold text-slate-900 group-hover:text-brand-700 transition">{p.title}</h3>
-                <div className="mt-4 text-sm font-semibold text-brand-700">Read article →</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="bg-brand-900 text-white">
         <div className="container-wrap py-16 lg:py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">Your Next Step Starts Here</h2>
-          <p className="mt-3 text-brand-100 max-w-xl mx-auto">
-            150,000+ students have passed through our programs. Join the next cohort — admissions are open across
-            all courses.
-          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold">{content.cta_heading}</h2>
+          <p className="mt-3 text-brand-100 max-w-xl mx-auto">{content.cta_paragraph}</p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <Link href="/admission" className="btn-accent">Apply Now</Link>
-            <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">
-              Contact Us
-            </Link>
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">Contact Us</Link>
           </div>
         </div>
       </section>
