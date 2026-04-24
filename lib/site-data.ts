@@ -4,7 +4,7 @@ export const siteConfig = {
   headline: 'Institute Led by IITians and PhD Experts',
   subHeadline: 'Best CAD / CAM / AI & Data Science Institute',
   description:
-    'Rajasthan's longest-running computer training institute. Practical, job-focused programs in CAD, CAM, AI, data science, interior design, and more — taught by IIT alumni and PhD-credentialed faculty.',
+    "Rajasthan's longest-running computer training institute. Practical, job-focused programs in CAD, CAM, AI, data science, interior design, and more — taught by IIT alumni and PhD-credentialed faculty.",
   email: 'jodhpurscope@gmail.com',
   phone: '+91 8560000535',
   altPhone: '+91 291 2626800',
