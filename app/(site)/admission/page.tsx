@@ -10,8 +10,8 @@ export default function AdmissionPage() {
           <div className="text-xs font-semibold text-brand-200">Admission &amp; Payment</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Join Computer Institute</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            Take the first step toward a successful IT career. Our admission process is simple and hassle-free —
-            complete the form below and our team will reach out within 24 hours.
+            Admissions are open across all programs. The application process is simple —
+            fill the form below and our team will reach out within 24 hours to confirm details.
           </p>
         </div>
       </section>
@@ -22,7 +22,7 @@ export default function AdmissionPage() {
             <div className="card">
               <h2 className="text-2xl font-bold text-slate-900">Admission Form</h2>
               <p className="mt-2 text-sm text-slate-600">
-                Fill in all required fields. We&apos;ll contact you to confirm your admission and payment details.
+                Required fields are marked. Once submitted, weFill in all required fields. We&apos;ll contact you to confirm your admission and payment details.apos;ll call you to finalize admission and payment.
               </p>
               <div className="mt-6">
                 <AdmissionForm />

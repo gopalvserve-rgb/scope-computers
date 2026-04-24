@@ -11,8 +11,8 @@ export default function SyllabusPage() {
           <div className="text-xs font-semibold text-brand-200">Downloads</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Syllabus &amp; Course Brochures</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            Explore our carefully designed syllabus that covers all essential topics to help you master your
-            chosen course and build practical skills.
+            Full syllabi for every course — topics, hours, software, and what youExplore our carefully designed syllabus that covers all essential topics to help you master yourapos;ll build by the end. Pick your
+            program and download the detailed outline.
           </p>
         </div>
       </section>

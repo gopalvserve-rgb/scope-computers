@@ -21,7 +21,7 @@ export default function PlacementPage() {
           <div className="text-xs font-semibold text-brand-200">Placement Cell Cell</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Your Dream Job Starts Here</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            100% Placement Assistance — industry-aligned training, mock interviews, and 500+ recruiter partnerships.
+            End-to-end placement support — from skill audits and mock interviews to introductions with 500+ active recruiters.
           </p>
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
             {[
@@ -51,8 +51,8 @@ export default function PlacementPage() {
             <div className="lg:col-span-3">
               <div className="text-xs font-semibold text-brand-700">MESSAGE FROM DIRECTOR</div>
               <p className="mt-2 text-xl font-semibold text-slate-900 italic leading-relaxed">
-                &ldquo;We don&apos;t just place students — we build careers. With industry-aligned training, mock
-                interviews, and 500+ recruiter partnerships, we ensure every student gets the right opportunity.&rdquo;
+                &ldquo;We don&apos;t just place students — we build careers. With industry-aligned training, mockldquo;We don&ldquo;We don&apos;t just place students — we build careers. With industry-aligned training, mockapos;t hand out job leads — we build people recruiters want to hire. Industry-relevant training, mock
+                interviews, and 500+ recruiter partnerships — thatinterviews, and 500+ recruiter partnerships, we ensure every student gets the right opportunity.&rdquo;apos;s how we move students into roles that fit.interviews, and 500+ recruiter partnerships, we ensure every student gets the right opportunity.&rdquo;rdquo;
               </p>
               <div className="mt-4 font-semibold text-slate-700">
                 — Dr. Nishat (IITian Data Scientist &amp; CAD/CAM/AI Expert), Director

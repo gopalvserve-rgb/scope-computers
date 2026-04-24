@@ -36,8 +36,8 @@ export default function HomePage() {
               {siteConfig.subHeadline}
             </p>
             <p className="mt-6 text-brand-100/90 text-base max-w-xl leading-relaxed">
-              Best AutoCAD Computer Center in Jodhpur. Computer Institute is the oldest and most established
-              institute in the region, with an impressive track record of 35+ years of experience.
+              Jodhpur&apos;s longest-running computer training institute. Three decades of experience turning
+              beginners into hired professionals across CAD, CAM, AI, data science, and design.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/courses" className="btn-accent">Find Courses</Link>
@@ -62,16 +62,16 @@ export default function HomePage() {
                 ⭐ Featured Course
               </div>
               <h3 className="mt-3 text-2xl font-bold text-slate-900">
-                Interior Design / Architect Assistant
+                Interior Design &amp; Architect Assistant
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Become an industry-ready Interior Designer or Architect Assistant. Learn CAD, 3D modelling, space
-                planning, material selection, client handling, and business basics — get hired or start your own firm.
+                Go from beginner to hireable. Master CAD, 3D modeling, space planning, materials, and the client
+                handling that wins repeat work. Graduate ready for a job or your own practice.
               </p>
               <ul className="mt-4 space-y-1.5 text-sm text-slate-700">
-                <li>✅ Job-oriented curriculum</li>
-                <li>✅ Practical projects &amp; portfolio building</li>
-                <li>✅ Placement support</li>
+                <li>✅ Job-focused curriculum, not theory-heavy</li>
+                <li>✅ Real projects and a finished portfolio</li>
+                <li>✅ Direct placement assistance</li>
                 <li>✅ Small-batch mentoring</li>
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
@@ -94,10 +94,11 @@ export default function HomePage() {
       <section className="section bg-slate-50">
         <div className="container-wrap">
           <div className="max-w-2xl">
-            <div className="text-sm font-semibold text-brand-700">20,000+ unique course designs</div>
-            <h2 className="section-heading mt-2">Explore Top Career Domains</h2>
+            <div className="text-sm font-semibold text-brand-700">Programs built for outcomes</div>
+            <h2 className="section-heading mt-2">Pick a Career Path</h2>
             <p className="section-sub">
-              Discover career paths that truly resonate with your passion and explore mentorship programs that align with you.
+              Short, deliberate tracks designed around what employers actually hire for — not filler content.
+              Choose your direction and we&apos;ll build the rest of the plan with you.
             </p>
           </div>
 
@@ -105,32 +106,32 @@ export default function HomePage() {
             {[
               {
                 title: 'AutoCAD Certification Program',
-                body: 'Learn AutoCAD from Industry Expert & Chief Minister Awarded Nishat Khan — 30 years of experience. The Best AutoCAD training institute in Rajasthan with record placements.',
+                body: 'Master 2D drafting and 3D modeling under Chief Minister-awarded trainer Nishat Khan, with 30 years in the classroom. Rajasthan&apos;s most established AutoCAD track with a strong placement record.',
                 tag: 'Best-seller',
               },
               {
                 title: 'ArtCAM Training Program',
-                body: 'Certified ArtCAM course — master vector control, relief modeling, and toolpath optimization. Perfect for CNC routers, signage, and manufacturing.',
+                body: 'Production-grade CNC design. Learn clean vectors, relief modeling, and toolpath optimization — the skills that turn design files into reliable machine output.',
                 tag: 'Practical',
               },
               {
                 title: "'O' Level Course",
-                body: 'NIELIT Govt. of India Ministry of Electronics and IT approved. One-year course valid for various government and private jobs.',
+                body: 'NIELIT-approved, one-year certification recognized by Govt. of India (Ministry of Electronics & IT). Valid for a wide range of government and private sector roles.',
                 tag: 'Govt. Approved',
               },
               {
                 title: 'Interior Design',
-                body: 'Master AutoCAD, 3ds Max, space planning, and material selection. Build a professional portfolio and get hired.',
+                body: 'AutoCAD, 3ds Max, space planning, materials — the full stack for a hireable designer. Leave with a portfolio of finished projects, not classroom exercises.',
                 tag: 'Job-ready',
               },
               {
-                title: 'Data Science & Machine Learning',
-                body: 'Hands-on Python, statistics, and ML algorithms. Learn from IITian Data Scientists with real industry projects.',
+                title: 'Data Science &amp; Machine Learning',
+                body: 'Python, statistics, and real ML projects taught by IIT-trained data scientists. Industry-standard tooling and a capstone you can put on your resume.',
                 tag: 'High-demand',
               },
               {
-                title: 'Tally with GST + Advance Excel',
-                body: 'Practical accounting, payroll, inventory, and GST compliance. The fastest path to an accounting career.',
+                title: 'Tally with GST + Advanced Excel',
+                body: 'The fastest path into an accounting role. Full GST workflow, payroll, inventory, and reporting — plus enough Excel to handle any MIS request.',
                 tag: 'Short-term',
               },
             ].map((c) => (
@@ -139,7 +140,7 @@ export default function HomePage() {
                   {c.tag}
                 </div>
                 <h3 className="mt-3 text-lg font-bold text-slate-900">{c.title}</h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{c.body}</p>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: c.body }} />
                 <Link href="/courses" className="mt-4 inline-flex items-center text-sm font-semibold text-brand-700 hover:text-brand-800">
                   Learn more →
                 </Link>
@@ -188,12 +189,13 @@ export default function HomePage() {
         <div className="container-wrap">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="section-heading">Our Career Campus</h2>
+              <h2 className="section-heading">Centers Across India</h2>
               <p className="section-sub">
-                Replicating online impact through offline centers — city by city, across India.
+                On-site classrooms wherever our students are. In-person mentoring makes a difference — and
+                we&apos;re adding new cities every year.
               </p>
               <Link href="/contact" className="mt-6 inline-block btn-primary">
-                Find a Campus Near You
+                Find a Center Near You
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -211,9 +213,10 @@ export default function HomePage() {
       <section className="section">
         <div className="container-wrap">
           <div className="max-w-2xl">
-            <h2 className="section-heading">Job Openings at Placement Cell</h2>
+            <h2 className="section-heading">Hiring Through Our Placement Cell</h2>
             <p className="section-sub">
-              Discover career opportunities through Placement Cell. We connect skilled students with top companies.
+              Our placement team works directly with recruiters to match students with roles that fit their skill
+              level and ambition. Here&apos;s a snapshot of what&apos;s active right now.
             </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -235,9 +238,9 @@ export default function HomePage() {
       <section className="section bg-slate-50">
         <div className="container-wrap">
           <div className="max-w-2xl">
-            <h2 className="section-heading">Upcoming Events</h2>
+            <h2 className="section-heading">Workshops &amp; Events</h2>
             <p className="section-sub">
-              Stay updated with our latest workshops, webinars, and training sessions.
+              Free workshops, industry sessions, and special events — open to current students and the public.
             </p>
           </div>
           <div className="mt-10 space-y-3">
@@ -258,9 +261,9 @@ export default function HomePage() {
       <section className="section">
         <div className="container-wrap">
           <div className="max-w-2xl">
-            <h2 className="section-heading">Latest News &amp; Articles</h2>
+            <h2 className="section-heading">From Our Blog</h2>
             <p className="section-sub">
-              Stay informed with trending stories and in-depth articles.
+              Career advice, course breakdowns, and practical guides — from our faculty and industry partners.
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -278,9 +281,10 @@ export default function HomePage() {
       {/* CTA */}
       <section className="bg-brand-900 text-white">
         <div className="container-wrap py-16 lg:py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">Ready to Start Your Career Journey?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold">Your Next Step Starts Here</h2>
           <p className="mt-3 text-brand-100 max-w-xl mx-auto">
-            Join 150,000+ students trained by Computer Institute. Admissions open for all courses.
+            150,000+ students have passed through our programs. Join the next cohort — admissions are open across
+            all courses.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <Link href="/admission" className="btn-accent">Apply Now</Link>

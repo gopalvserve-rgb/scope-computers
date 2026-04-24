@@ -4,7 +4,7 @@ export const siteConfig = {
   headline: 'Institute Led by IITians and PhD Experts',
   subHeadline: 'Best CAD / CAM / AI & Data Science Institute',
   description:
-    'Computer Institute is the oldest and most established computer training institute in Rajasthan, with 35+ years of experience. Learn CAD, CAM, AI, Data Science, Interior Design, and more.',
+    'Rajasthan's longest-running computer training institute. Practical, job-focused programs in CAD, CAM, AI, data science, interior design, and more — taught by IIT alumni and PhD-credentialed faculty.',
   email: 'jodhpurscope@gmail.com',
   phone: '+91 8560000535',
   altPhone: '+91 291 2626800',
@@ -182,14 +182,14 @@ export const blogPosts = [
 ];
 
 export const syllabi = [
-  { title: 'New AutoCAD Syllabus', description: 'Master 2D drafting and 3D modeling with the latest tools, techniques, and design standards.', file: 'new_AutoCAD_Syllabus-1.pdf' },
-  { title: '3ds Max', description: 'Create stunning 3D models, animations, and visual effects for architecture and interior design.', file: '3dsmax-1.pdf' },
-  { title: 'Revit Architect', description: 'Learn Building Information Modeling (BIM) with 3D design, drafting, and project visualization.', file: 'revit-architect-syllabus-1.pdf' },
-  { title: 'Lumion', description: 'Real-time 3D visualization, rendering techniques, and architectural animation.', file: 'Lumion-syllabus.pdf' },
-  { title: 'V-Ray Rendering', description: 'Lighting, materials, and rendering techniques to create photo-realistic architectural visuals.', file: 'V-Ray-rendering-syllabus.pdf' },
-  { title: 'Corona Rendering', description: 'High-quality photo-realistic rendering for interior and exterior visualization.', file: 'corona-syllabus.pdf' },
-  { title: 'Interior Design', description: 'Complete curriculum covering space planning, materials, lighting, and furniture design.', file: 'interior-design-syllabus.pdf' },
-  { title: 'ArtCAM / CNC', description: 'Vector creation, relief modeling, and toolpath optimization for CNC production.', file: 'artcam-syllabus.pdf' },
-  { title: 'Tally with GST', description: 'Practical accounting, payroll, inventory, and GST compliance using Tally.', file: 'tally-syllabus.pdf' },
-  { title: 'Data Science & ML', description: 'Python, statistics, ML algorithms, and real-world data projects.', file: 'data-science-syllabus.pdf' },
+  { title: 'New AutoCAD Syllabus', description: 'Current 2D/3D workflows, the latest release features, and industry drafting conventions.', file: 'new_AutoCAD_Syllabus-1.pdf' },
+  { title: '3ds Max', description: 'Professional 3D modeling and animation for architectural and interior visualization work.', file: '3dsmax-1.pdf' },
+  { title: 'Revit Architect', description: 'BIM fundamentals, parametric modeling, drafting, and coordinated project documentation.', file: 'revit-architect-syllabus-1.pdf' },
+  { title: 'Lumion', description: 'Real-time rendering, walkthrough animations, and presentation-ready output for architects.', file: 'Lumion-syllabus.pdf' },
+  { title: 'V-Ray Rendering', description: 'Light setup, material authoring, and render optimization for photoreal architectural output.', file: 'V-Ray-rendering-syllabus.pdf' },
+  { title: 'Corona Rendering', description: 'Interior and exterior rendering with photorealistic lighting, shaders, and post-production.', file: 'corona-syllabus.pdf' },
+  { title: 'Interior Design', description: 'Space planning, materials literacy, lighting design, and furniture layout — the full designer stack.', file: 'interior-design-syllabus.pdf' },
+  { title: 'ArtCAM / CNC', description: 'Clean vector construction, relief work, and toolpath strategies built for actual CNC production.', file: 'artcam-syllabus.pdf' },
+  { title: 'Tally with GST', description: 'Bookkeeping, payroll, inventory control, and full GST setup using Tally.', file: 'tally-syllabus.pdf' },
+  { title: 'Data Science & ML', description: 'Python, applied statistics, core ML algorithms, and a capstone built on real datasets.', file: 'data-science-syllabus.pdf' },
 ];

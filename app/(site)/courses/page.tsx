@@ -11,8 +11,8 @@ export default function CoursesPage() {
           <div className="text-xs font-semibold text-brand-200">Our Courses</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Explore All Courses</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            From beginner-friendly certifications to advanced specializations, find a course that matches
-            your career goals. All courses are taught by industry experts with hands-on practical training.
+            Short tracks, diploma programs, and government-approved certifications — matched to your career goals and
+            taught by instructors with real industry experience. Every program is built around practical work.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/admission" className="btn-accent">Apply for Admission</Link>

@@ -11,8 +11,8 @@ export default function ContactPage() {
           <div className="text-xs font-semibold text-brand-200">Contact Us</div>
           <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Let&apos;s Talk</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            Have questions or need guidance? We&apos;re here to help! Reach out for course details, admissions,
-            or support — online or at one of our centers.
+            Questions about courses, admissions, or placements? WeHave questions or need guidance? We&apos;re here to help! Reach out for course details, admissions,apos;re available by phone, email,
+            or in person at any of our centers across India.
           </p>
         </div>
       </section>

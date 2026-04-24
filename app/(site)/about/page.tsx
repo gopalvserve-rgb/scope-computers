@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'About Us — Building Futures with Expert-Led Learning' };
+export const metadata = { title: 'About Us — Three Decades of Practical Training' };
 
 export default function AboutPage() {
   return (
@@ -8,12 +8,12 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
         <div className="container-wrap py-16 lg:py-20">
-          <div className="text-xs font-semibold text-brand-200">About Computer Institute</div>
-          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">About Us</h1>
+          <div className="text-xs font-semibold text-brand-200">About the Institute</div>
+          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold">Who We Are</h1>
           <p className="mt-4 max-w-3xl text-brand-100 leading-relaxed">
-            Welcome to Computer Institute — your trusted partner in IT education and digital skills. We
-            provide expert-led courses in CAD, graphic design, AI, and computer applications to help
-            students and professionals excel in the digital world.
+            We&apos;re a computer training institute focused on one thing: turning students into hired
+            professionals. CAD, CAM, design, data science, and accounting — taught by people who have
+            actually worked in those fields for decades.
           </p>
         </div>
       </section>
@@ -41,31 +41,27 @@ export default function AboutPage() {
 
           <div className="lg:col-span-2 prose-scope">
             <div className="text-xs font-semibold text-brand-700">Meet the Director</div>
-            <h2 className="text-3xl font-bold text-slate-900 mt-2">Dr. Nishat — M.Tech IIT &amp; PhD Data Scientist</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mt-2">Dr. Nishat — IITian, Data Scientist, Educator</h2>
             <p>
-              Dr. Nishat is a visionary educator, technologist, and leader who has been shaping the future of
-              technical education in India since the age of seventeen. An IITian and a Double Doctorate holder,
-              he is a globally recognized Data Scientist and expert in CAD/CAM, GIS, and Artificial Intelligence.
+              Dr. Nishat has been shaping technical education in India since he was seventeen. An IIT alumnus with a
+              double doctorate, he&apos;s a recognized Data Scientist with deep expertise across CAD/CAM, GIS, and
+              Artificial Intelligence — a rare combination of academic depth and applied skill.
             </p>
             <p>
-              Dr. Nishat is the recipient of hundreds of national and international awards, honored for his
-              unmatched contributions to the field of computer education and innovation. He is also the author
-              of several acclaimed books in the areas of technology, robotics, AI, and design.
+              His work has earned him hundreds of national and international awards, and he&apos;s the author of
+              several books across robotics, AI, and design. But credentials aside, what makes him different is that
+              he still teaches. Advanced tracks in CAD/CAM, GIS, AI, and programming are run by him personally — not
+              delegated down.
             </p>
             <p>
-              What truly distinguishes Dr. Nishat is his hands-on involvement in education. Despite being the
-              Director, he personally teaches advanced courses such as CAD/CAM, GIS, Artificial Intelligence,
-              and Programming, ensuring that students receive guidance from the very best.
-            </p>
-            <p>
-              With a career spanning decades, he has trained over one lakh students, many of whom are now
-              successfully working in top companies or running their own ventures. He has also been a guest
-              faculty and trainer at several prestigious engineering institutions across India.
+              Over his career, more than a lakh students have trained under his guidance. Many now work at top firms
+              or run their own ventures. He&apos;s also served as guest faculty at several of India&apos;s leading
+              engineering institutes.
             </p>
             <div className="mt-6 rounded-lg border-l-4 border-accent-500 bg-accent-50 p-4 text-slate-800">
               <em>
-                Under his leadership, Computer Institute has grown into one of the most practical, industry-driven
-                training ecosystems in the country.
+                Under his direction, the institute has grown into one of India&apos;s most hands-on, industry-aligned
+                training setups.
               </em>
             </div>
           </div>
@@ -76,26 +72,26 @@ export default function AboutPage() {
       <section className="section bg-slate-50">
         <div className="container-wrap">
           <div className="max-w-3xl">
-            <div className="text-xs font-semibold text-brand-700">Who We Are</div>
-            <h2 className="section-heading mt-2">Building Futures with Expert-Led Learning</h2>
+            <div className="text-xs font-semibold text-brand-700">What Makes Us Different</div>
+            <h2 className="section-heading mt-2">Real Equipment, Real Projects, Real Outcomes</h2>
             <p className="section-sub">
-              Established in 1993, Computer Institute is one of India&apos;s oldest and most respected computer
-              training institutes. With branches in Bangalore, Jodhpur, Hyderabad, Ajmer, Noida, Gorakhpur,
-              and beyond, we have built a legacy of excellence spanning three decades.
+              Established in 1993, we&apos;re one of the oldest computer training institutes in India. Branches in
+              Bangalore, Jodhpur, Hyderabad, Ajmer, Noida, Gorakhpur, and beyond. Three decades of refining how we
+              teach — and more importantly, what we teach.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { title: 'Civil Engineering', body: 'Practical sessions with Total Station, GPS, DGPS, Auto Level, Drone Mapping, and town planning instruments.' },
-              { title: 'Mechanical Engineering', body: 'Training supported with actual CNC machines for hands-on manufacturing and automation practice.' },
-              { title: 'Graphic Designing', body: 'In-house advertising agency, screen printing units, flex machines, and real-time production workflows.' },
-              { title: 'CNC Router & Laser Design', body: 'Our own wooden, stone, and laser CNC routers for true hands-on training.' },
-              { title: 'Robotics', body: 'Sensors, controllers, robotics kits, and accessories for real-time development.' },
-              { title: 'AI-Powered Job Portal', body: 'Independent placement company with thousands of verified vacancies updated regularly.' },
+              { title: 'Civil Engineering', body: 'Hands-on with Total Station, GPS, DGPS, Auto Level, drone mapping, and town-planning instruments — the actual tools used on live sites.' },
+              { title: 'Mechanical Engineering', body: 'Real CNC machines on-site. Students design, run, and adjust production workflows instead of simulating them in software.' },
+              { title: 'Graphic Design', body: 'We run an in-house ad agency. Students work on live client briefs using our screen printing units, flex machines, and production workflows.' },
+              { title: 'CNC Router &amp; Laser Design', body: 'Our own wood, stone, and laser CNC routers mean students cut real material — not just render it on screen.' },
+              { title: 'Robotics', body: 'Our own sensors, controllers, and robotics kits. Build working prototypes instead of watching videos of them.' },
+              { title: 'Placement Infrastructure', body: 'An AI-powered job portal plus an independent placement arm — thousands of verified openings, not vague promises.' },
             ].map((b) => (
               <div key={b.title} className="card">
-                <h3 className="font-bold text-slate-900">{b.title}</h3>
+                <h3 className="font-bold text-slate-900" dangerouslySetInnerHTML={{ __html: b.title }} />
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">{b.body}</p>
               </div>
             ))}
@@ -103,7 +99,7 @@ export default function AboutPage() {
 
           <div className="mt-10 rounded-xl bg-brand-700 text-white p-6 lg:p-8">
             <p className="text-lg font-semibold">
-              Computer Institute is not just an institute — it is a complete ecosystem of knowledge, innovation, and opportunity.
+              More than a training institute — a complete ecosystem of knowledge, equipment, and opportunity.
             </p>
           </div>
         </div>
@@ -113,18 +109,19 @@ export default function AboutPage() {
       <section className="section">
         <div className="container-wrap grid lg:grid-cols-2 gap-10">
           <div className="card">
-            <h3 className="text-xl font-bold text-slate-900">Practice Makes Perfect</h3>
+            <h3 className="text-xl font-bold text-slate-900">Practice Beats Theory</h3>
             <p className="mt-3 text-slate-700 leading-relaxed">
-              We know about your hectic schedule. We also know the only way you truly understand a subject is
-              by practicing it in a real environment. We&apos;ve set a playground area that&apos;s full of hours of
-              exercises, questions, and challenges — it even has a gaming section.
+              You don&apos;t learn a tool by reading about it. Our practice area is stocked with hours of
+              exercises, real-world problems, and open challenges — so you can put theory to work the same day
+              you learn it. There&apos;s even a gaming section when you need a break.
             </p>
           </div>
           <div className="card">
-            <h3 className="text-xl font-bold text-slate-900">The Best Resource Facilities</h3>
+            <h3 className="text-xl font-bold text-slate-900">Live Classrooms, Real Equipment</h3>
             <p className="mt-3 text-slate-700 leading-relaxed">
-              In addition to our online classroom, we offer live classrooms at our institutes in Jodhpur,
-              Ajmer, and Bangalore. Here you&apos;ll use the most up-to-date facilities and computer equipment.
+              Online courses are convenient, but nothing replaces in-person access to current hardware and
+              software. Our live classrooms in Jodhpur, Ajmer, and Bangalore give you that — the latest gear,
+              in an actual workspace, with instructors in the room.
             </p>
           </div>
         </div>
